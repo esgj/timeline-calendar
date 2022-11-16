@@ -29,7 +29,8 @@
     "react-component",
     "events",
     "simple",
-    "ui"
+    "ui",
+    "weekly"
   ],
   "devDependencies": {
     "@types/react": "^18.0.25",
