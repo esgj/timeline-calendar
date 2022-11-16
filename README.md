@@ -3,21 +3,29 @@
 Simple timeline calendar for React that is easy to customize and work with.
 
 ```js
-import React from "react";
-import TimelineCalendar, { TimelineCalendarProps } from "timeline-calendar";
+import React, { useState } from "react";
+import TimelineCalendar from "timeline-calendar";
+
+// Import this CSS file if you do not want to implement all the details yourself.
+import "../node_modules/timeline-calendar/dist/lib.esm.css";
 
 let events = [
     {
-        id: 1,
-        title: "Workshop",
-        start: new Date("2022-11-12 08:00"),
-        end: new Date("2022-11-12 13:30"),
+      id: 1,
+      title: "Meeting with CEO",
+      start: new Date("2022-11-15 10:00"),
+      end: new Date("2022-11-15 12:00"),
+    },
+    {
+      id: 2,
+      title: "Leisure",
+      start: new Date("2022-11-17 08:00"),
+      end: new Date("2022-11-18 14:00"),
     }
 ];
 
-let options: TimelineCalendarProps {
+let options = {
     events: events,
-    // currentDate: Date;
     // events: Event[];
     // numberOfColumns?: number; Defaults to 7 (weekly).
     // onCellClick?: (date: Date) => void;
@@ -29,9 +37,9 @@ let options: TimelineCalendarProps {
 }
 
 export default function App() {
-    let [dateNow, setDateNow] = useState(new Date());
+    let [date, setDate] = useState(new Date());
 
-    return <TimelineCalendar currentDate={dateNow} {...options} />;
+    return <TimelineCalendar {...options} currentDate={date} />;
 }
 ```
 
