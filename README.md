@@ -28,7 +28,7 @@ let options: TimelineCalendarProps {
     // businessHourStart?: number; Defaults to 8.
 }
 
-default export function App() {
+export default function App() {
     let [dateNow, setDateNow] = useState(new Date());
 
     return <TimelineCalendar currentDate={dateNow} {...options} />;
