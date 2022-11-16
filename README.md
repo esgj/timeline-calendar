@@ -43,7 +43,7 @@ export default function App() {
 }
 ```
 
-![Screenshot 2022-11-16 at 14 02 33](https://user-images.githubusercontent.com/6502063/202187920-bbb8c69f-c0d2-4ced-96b9-ef72c6fd7e50.png)
+![Screenshot 2022-11-16 at 14 04 57](https://user-images.githubusercontent.com/6502063/202188167-be88bd8b-7f5f-41fe-9609-74070a31fb52.png)
 
 It is easy to customize the theme by defining CSS variables in :root.
 
