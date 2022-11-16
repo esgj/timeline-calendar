@@ -1,6 +1,6 @@
 {
   "name": "timeline-calendar",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "",
   "main": "dist/lib.esm.js",
   "module": "dist/lib.esm.js",
