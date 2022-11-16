@@ -1,6 +1,6 @@
 {
-  "name": "temp-timeline-calendar-test",
-  "version": "0.1.4",
+  "name": "timeline-calendar",
+  "version": "0.1.3",
   "description": "",
   "main": "dist/lib.esm.js",
   "module": "dist/lib.esm.js",
@@ -31,5 +31,9 @@
     "live-server": "^1.2.2",
     "rimraf": "^3.0.2",
     "typescript": "^4.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esgj/timeline-calendar.git"
   }
 }
