@@ -1,0 +1,36 @@
+{
+  "name": "temp-timeline-calendar-test",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/lib.esm.js",
+  "module": "dist/lib.esm.js",
+  "types": "dist/TimelineCalendar.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "node serve.js",
+    "build": "npm run clean && node build.js && tsc --emitDeclarationOnly --outDir dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm version patch && npm run build"
+  },
+  "author": "Espen Gjendem <espen.gjendem@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^2.29.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "chokidar": "^3.5.3",
+    "esbuild": "^0.15.14",
+    "live-server": "^1.2.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.3"
+  }
+}

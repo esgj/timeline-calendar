@@ -1,0 +1,122 @@
+:root {
+    --cell-divider-color: #dce5ec;
+    --cell-bg-color: white;
+    --xy-bg-color: #eef6fd;
+    --xy-color: #606060;
+    --xy-divider-color: #b1bbc4;
+    --border-color: transparent;
+    --event-color: rgba(225, 81, 83, 0.75);
+    --cell-hover-color: #a8a8a8;
+    --cell-disabled-color: rgb(245, 245, 245);
+    --calendar-height: 400px;
+  }
+  
+  .timeline-calendar {
+    width: 700px;
+    height: 600px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr;
+    grid-template-areas:
+      "header"
+      "grid";
+    font-family: "Source Sans Pro", sans-serif;
+    border: 0px solid var(--border-color);
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  }
+  
+  .timeline-calendar .calendar-header {
+    grid-area: header;
+    display: flex;
+    border-bottom: 1px solid var(--xy-divider-color);
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .timeline-calendar .timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(48, 1fr);
+    height: 1523px;
+    gap: 1px;
+    padding: 1px 1px 1px 0px;
+    flex: 1;
+    background-color: var(--cell-divider-color);
+    position: relative;
+  }
+  
+  .timeline-calendar .cell {
+    background-color: var(--cell-bg-color);
+  }
+  
+  .timeline-calendar .dates .cell {
+    background-color: var(--xy-bg-color);
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    color: var(--xy-color);
+    flex: 1;
+    user-select: none;
+  }
+  
+  .timeline-calendar .timeline .cell:hover {
+    background-color: var(--cell-hover-color);
+    cursor: pointer;
+  }
+  
+  .timeline-calendar .timeline .disabled-cell {
+    background-color: var(--cell-disabled-color) !important;
+    cursor: not-allowed !important;
+  }
+  
+  .timeline-calendar .hour-cell {
+    background-color: var(--xy-bg-color);
+    font-size: 16px;
+    display: flex;
+    justify-content: end;
+    padding: 5px;
+    margin-right: 1px;
+    user-select: none;
+    color: var(--xy-color);
+  }
+  
+  .calendar-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow: scroll;
+    margin-top: -1px;
+  }
+  
+  .calendar-time {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(24, 1fr);
+    height: 1523px;
+    gap: 1px;
+    padding: 1px 0px 1px 1px;
+    width: 60px;
+    background-color: var(--xy-divider-color);
+  }
+  
+  .timeline-calendar .dates {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1px;
+    padding: 1px 1px 0px 0px;
+    flex: 1;
+    background-color: var(--xy-divider-color);
+  }
+  
+  .timeline-calendar .event {
+    width: 85px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: var(--event-color);
+    color: white;
+    cursor: pointer;
+  }
+  
